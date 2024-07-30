@@ -12,6 +12,8 @@ internal class Music
     public int Duration { get; set; }
     [JsonPropertyName("genre")]
     public string? Genre { get; set; }
+    [JsonPropertyName("year")]
+    public string? Year { get; set; }
 
     public void ShowMusicDetails()
     {
