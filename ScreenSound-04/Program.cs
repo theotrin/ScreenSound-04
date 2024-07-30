@@ -13,7 +13,16 @@ using (HttpClient client = new HttpClient())
         //LinqOrder.FilterByName(musics);
         //LinqOrder.FilterArtistByMusicalGenre(musics, "hip hop");
         //LinqFilter.FilterMusicFromArtist(musics, "Post Malone");
-        LinqFilter.FilterMusicsByYear(musics);
+        //LinqFilter.FilterMusicsByYear(musics);
+        FavoriteMusics theoFavoriteMusics = new("Theo");
+        theoFavoriteMusics.AddFavoriteMusic(musics[1]);
+        theoFavoriteMusics.AddFavoriteMusic(musics[90]);
+        theoFavoriteMusics.AddFavoriteMusic(musics[44]);
+        theoFavoriteMusics.AddFavoriteMusic(musics[4]);
+        theoFavoriteMusics.AddFavoriteMusic(musics[7]);
+
+        theoFavoriteMusics.ShowFavoriteMusics();
+        theoFavoriteMusics.GenereateJsonFile();
 
     }
     catch (Exception ex)
