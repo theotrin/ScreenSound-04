@@ -35,4 +35,15 @@ internal class LinqFilter
             Console.WriteLine($"({music.Year}) {music.Name}");
         }
     }
+
+    public static void FilterAllTonalities(List<Music> musics)
+    {
+        var musicalTonalities = musics.Where(music => music.Note!.Equals("C#")).Select(music => music.Name).ToList();
+
+        Console.WriteLine("All C# Tonalities:");
+        foreach( var note in musicalTonalities)
+        {
+            Console.WriteLine(note);
+        }
+    }
 }
